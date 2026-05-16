@@ -354,48 +354,54 @@
               </li>
             </ul>
           </div>
-          <div class="col-md-6">
-            <div class="bg-light text-dark p-4 rounded shadow">
-              <h4 class="fw-bold mb-3">Unverbindliche Anfrage</h4>
-              <form>
-                <div class="mb-3">
-                  <label class="form-label fw-bold">Name / Firma</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    required
-                    placeholder="z.B. Bau GmbH"
-                  />
-                </div>
-                <div class="row">
-                  <div class="col mb-3">
-                    <label class="form-label fw-bold">Personen</label>
-                    <input
-                      type="number"
-                      class="form-control"
-                      min="1"
-                      value="1"
-                    />
-                  </div>
-                  <div class="col mb-3">
-                    <label class="form-label fw-bold">Zeitraum</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="z.B. 2 Wochen"
-                    />
-                  </div>
-                </div>
-                <div class="mb-3">
-                  <label class="form-label fw-bold">E-Mail / Telefon</label>
-                  <input type="text" class="form-control" required />
-                </div>
-                <button type="submit" class="btn btn-warning w-100 fw-bold">
-                  Anfrage absenden
-                </button>
-              </form>
-            </div>
-          </div>
+<div class="col-md-6">
+  <div class="bg-light text-dark p-4 rounded shadow">
+    <h4 class="fw-bold mb-3">Unverbindliche Anfrage</h4>
+    
+    <!-- action verweist auf das PHP-Skript, method="POST" überträgt die Daten sicher -->
+    <form action="senden.php" method="POST">
+      <div class="mb-3">
+        <label class="form-label fw-bold">Name / Firma</label>
+        <input
+          type="text"
+          name="firma"
+          class="form-control"
+          required
+          placeholder="z.B. Bau GmbH"
+        />
+      </div>
+      <div class="row">
+        <div class="col mb-3">
+          <label class="form-label fw-bold">Personen</label>
+          <input
+            type="number"
+            name="personen"
+            class="form-control"
+            min="1"
+            value="1"
+          />
+        </div>
+        <div class="col mb-3">
+          <label class="form-label fw-bold">Zeitraum</label>
+          <input
+            type="text"
+            name="zeitraum"
+            class="form-control"
+            placeholder="z.B. 2 Wochen"
+          />
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label fw-bold">E-Mail / Telefon</label>
+        <input type="text" name="kontakt" class="form-control" required />
+      </div>
+      <button type="submit" class="btn btn-warning w-100 fw-bold">
+        Anfrage absenden
+      </button>
+    </form>
+  </div>
+</div>
+
         </div>
       </div>
     </section>
