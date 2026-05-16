@@ -1,0 +1,51 @@
+// ==========================================================================
+// 1. BOOTSTRAP VARIABLEN ÜBERSCHREIBEN (Muss VOR dem Bootstrap-Import stehen!)
+// ==========================================================================
+
+// Farb-Definitionen (Sattes Blau & kräftiges Handwerker-Gelb)
+$my-dark-blue:  #1e293b; 
+$my-warn-yellow: #f59e0b; 
+$my-light-bg:   #f8fafc;
+
+// Bootstrap Systemfarben neu zuweisen
+$primary:       $my-dark-blue;   // Hauptfarbe (für Links, Icons, Header)
+$warning:       $my-warn-yellow; // Signalfarbe (für "Jetzt anrufen" & wichtige Buttons)
+$body-bg:       $my-light-bg;    // Hintergrundfarbe der gesamten Webseite
+
+// Typografie / Schriftarten anpassen
+// Nutzt moderne, serifenlose System-Schriften (extrem schnelle Ladezeit!)
+$font-family-sans-serif: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+$font-size-base: 1rem;           // Standard-Textgröße
+$headings-font-weight: 700;      // Überschriften standardmäßig fett drucken
+
+// Layout-Anpassungen
+$enable-rounded: true;           // Aktiviert abgerundete Ecken bei Buttons & Karten
+
+
+// ==========================================================================
+// 2. BOOTSTRAP QUELLCODE IMPORTIEREN
+// ==========================================================================
+
+// Pfad anpassen, je nachdem ob Bootstrap per ZIP oder npm installiert wurde
+// Wenn Sie den Ordner im Projekt haben, nutzen Sie Ihren relativen Pfad, z.B.:
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+// ==========================================================================
+// 3. EIGENE, ZUSÄTZLICZE DESIGN-REGELN (Optional, nach Bootstrap-Import)
+// ==========================================================================
+
+// Beispiel: Individueller Hero-Bereich mit dunklem Overlay für gute Lesbarkeit
+.hero-section {
+    background: linear-gradient(rgba(30, 41, 59, 0.8), rgba(30, 41, 59, 0.8)), 
+                url('../assets/images/hero-bg.jpg') no-repeat center center/cover;
+    padding: 120px 0;
+    color: #ffffff;
+}
+
+// Schatten für die Zimmer-Karten verstärken
+.card {
+    border: none;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
