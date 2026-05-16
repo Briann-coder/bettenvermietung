@@ -191,6 +191,50 @@
               />
             </div>
           </div>
+          <!-- Hinweis zur genauen Zimmeraufteilung und Gemeinschaftsräumen Hoisdorf -->
+          <div
+            class="alert alert-info border-0 shadow-sm mt-4 p-4"
+            role="alert"
+          >
+            <div class="d-flex align-items-start mb-3">
+              <i
+                class="bi bi-info-circle-fill fs-4 text-primary me-3 flex-shrink-0 mt-1"
+              ></i>
+              <div>
+                <h5 class="fw-bold text-dark mb-1">
+                  Genaue Zimmer- & Bettenaufteilung
+                </h5>
+                <p class="text-muted small mb-0">
+                  Insgesamt 13 Betten aufgeteilt auf 4 separate Zimmer:
+                </p>
+              </div>
+            </div>
+
+            <!-- Strukturierte Liste der Zimmer für Hoisdorf -->
+            <div class="row g-2 ms-1 ps-3 border-start border-primary border-2">
+              <div class="col-sm-6">
+                <strong>Zimmer 6:</strong> 3-Bettzimmer
+              </div>
+              <div class="col-sm-6">
+                <strong>Zimmer 7:</strong> 4-Bettzimmer
+              </div>
+              <div class="col-sm-6">
+                <strong>Zimmer 8:</strong> 5-Bettzimmer
+              </div>
+              <div class="col-sm-6">
+                <strong>Zimmer 9:</strong> 1-Bettzimmer
+              </div>
+            </div>
+
+            <hr class="my-3 text-primary opacity-25" />
+
+            <!-- Hinweis zu Sanitäranlagen und Küchen für Hoisdorf -->
+            <div class="d-flex align-items-center text-dark fw-semibold ms-1">
+              <i class="bi bi-houses me-2 text-primary"></i>
+              Hierzu stehen 2 Toiletten- und Duschgelegenheiten und 1 Küche zur
+              gemeinsamen Nutzung zur Verfügung.
+            </div>
+          </div>
         </div>
 
         <!-- RECHTE SPALTE: Ausstattung & Buchung -->
@@ -354,54 +398,58 @@
               </li>
             </ul>
           </div>
-<div class="col-md-6">
-  <div class="bg-light text-dark p-4 rounded shadow">
-    <h4 class="fw-bold mb-3">Unverbindliche Anfrage</h4>
-    
-    <!-- action verweist auf das PHP-Skript, method="POST" überträgt die Daten sicher -->
-    <form action="senden.php" method="POST">
-      <div class="mb-3">
-        <label class="form-label fw-bold">Name / Firma</label>
-        <input
-          type="text"
-          name="firma"
-          class="form-control"
-          required
-          placeholder="z.B. Bau GmbH"
-        />
-      </div>
-      <div class="row">
-        <div class="col mb-3">
-          <label class="form-label fw-bold">Personen</label>
-          <input
-            type="number"
-            name="personen"
-            class="form-control"
-            min="1"
-            value="1"
-          />
-        </div>
-        <div class="col mb-3">
-          <label class="form-label fw-bold">Zeitraum</label>
-          <input
-            type="text"
-            name="zeitraum"
-            class="form-control"
-            placeholder="z.B. 2 Wochen"
-          />
-        </div>
-      </div>
-      <div class="mb-3">
-        <label class="form-label fw-bold">E-Mail / Telefon</label>
-        <input type="text" name="kontakt" class="form-control" required />
-      </div>
-      <button type="submit" class="btn btn-warning w-100 fw-bold">
-        Anfrage absenden
-      </button>
-    </form>
-  </div>
-</div>
+          <div class="col-md-6">
+            <div class="bg-light text-dark p-4 rounded shadow">
+              <h4 class="fw-bold mb-3">Unverbindliche Anfrage</h4>
 
+              <!-- action verweist auf das PHP-Skript, method="POST" überträgt die Daten sicher -->
+              <form action="senden.php" method="POST">
+                <div class="mb-3">
+                  <label class="form-label fw-bold">Name / Firma</label>
+                  <input
+                    type="text"
+                    name="firma"
+                    class="form-control"
+                    required
+                    placeholder="z.B. Bau GmbH"
+                  />
+                </div>
+                <div class="row">
+                  <div class="col mb-3">
+                    <label class="form-label fw-bold">Personen</label>
+                    <input
+                      type="number"
+                      name="personen"
+                      class="form-control"
+                      min="1"
+                      value="1"
+                    />
+                  </div>
+                  <div class="col mb-3">
+                    <label class="form-label fw-bold">Zeitraum</label>
+                    <input
+                      type="text"
+                      name="zeitraum"
+                      class="form-control"
+                      placeholder="z.B. 2 Wochen"
+                    />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-bold">E-Mail / Telefon</label>
+                  <input
+                    type="text"
+                    name="kontakt"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-warning w-100 fw-bold">
+                  Anfrage absenden
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </section>
