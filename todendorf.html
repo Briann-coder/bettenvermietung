@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unterkunft Todendorf | Bettenvermietung-Stormarn</title>
+
+    <!-- Haupt-CSS -->
+    <link href="css/main.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <!--<link rel="stylesheet" href="https://jsdelivr.net">-->
+    <!-- Optionale CSS-Ergänzungen -->
+    <link rel="stylesheet" href="css/_custom.css" />
+
+    <style>
+      /* Fixiert die Höhe des Sliders, damit das Layout beim Wechseln nicht springt */
+      .carousel-inner img {
+        height: 450px;
+        object-fit: cover;
+      }
+      @media (max-width: 768px) {
+        .carousel-inner img {
+          height: 250px;
+        }
+      }
+      .thumbnail-img {
+        height: 70px;
+        object-fit: cover;
+        cursor: pointer;
+        opacity: 0.6;
+        transition: opacity 0.2s;
+      }
+      .thumbnail-img:hover,
+      .thumbnail-img.active {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation (Zurück-Button für einfache Navigation) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+          <i class="bi bi-arrow-left me-2"></i> Zurück zur Übersicht
+        </a>
+        <a
+          class="btn btn-warning fw-bold dm-none d-lg-block"
+          href="tel:+49123456789"
+        >
+          <i class="bi bi-telephone-fill me-1"></i> Jetzt Anrufen
+        </a>
+      </div>
+    </nav>
+
+    <!-- Hauptbereich -->
+    <main class="container my-5">
+      <div class="row g-5">
+        <!-- LINKE SPALTE: Bildergalerie -->
+        <div class="col-lg-7">
+          <h1 class="fw-bold mb-3">Unterkunft Todendorf</h1>
+          <p class="text-muted">
+            <i class="bi bi-geo-alt-fill text-danger me-1"></i> 5 Zimmer | 16
+            Betten | Nahe A1 & A21
+          </p>
+
+          <!-- Bootstrap Karussell (Slider) -->
+          <div
+            id="hausGalerie"
+            class="carousel slide shadow-sm rounded overflow-hidden"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="./assets/todendorf/todendorf zimmer3.jpg"
+                  class="d-block w-100"
+                  alt="Außenansicht Haus Todendorf"
+                  loading="eager"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/todendorf/küche todendorf2.jpg"
+                  class="d-block w-100"
+                  alt="Schlafzimmer mit Einzelbetten"
+                  loading="lazy"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/todendorf/todendorf zimmer4.jpg"
+                  class="d-block w-100"
+                  alt="Voll ausgestattete Gemeinschaftsküche"
+                  loading="lazy"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/todendorf/todendorf zimmer5.jpg"
+                  class="d-block w-100"
+                  alt="Modernes Badezimmer mit Dusche"
+                  loading="lazy"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/todendorf/todendorf dusche2.jpg"
+                  class="d-block w-100"
+                  alt="Modernes Badezimmer mit Dusche"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            <!-- Pfeile zur Steuerung -->
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#hausGalerie"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Zurück</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#hausGalerie"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Weiter</span>
+            </button>
+          </div>
+
+          <!-- Klickbare Vorschaubilder (Thumbnails) -->
+          <div class="row g-2 mt-2">
+            <div class="col">
+              <img
+                src="./assets/todendorf/todendorf zimmer3.jpg"
+                class="img-fluid w-100 thumbnail-img active"
+                data-bs-target="#hausGalerie"
+                data-bs-slide-to="0"
+                alt="Vorschau 1"
+              />
+            </div>
+            <div class="col">
+              <img
+                src="./assets/todendorf/küche todendorf2.jpg"
+                class="img-fluid w-100 thumbnail-img"
+                data-bs-target="#hausGalerie"
+                data-bs-slide-to="1"
+                alt="Vorschau 2"
+              />
+            </div>
+            <div class="col">
+              <img
+                src="./assets/todendorf/todendorf zimmer4.jpg"
+                class="img-fluid w-100 thumbnail-img"
+                data-bs-target="#hausGalerie"
+                data-bs-slide-to="2"
+                alt="Vorschau 3"
+              />
+            </div>
+            <div class="col">
+              <img
+                src="./assets/todendorf/todendorf zimmer5.jpg"
+                class="img-fluid w-100 thumbnail-img"
+                data-bs-target="#hausGalerie"
+                data-bs-slide-to="3"
+                alt="Vorschau 4"
+              />
+            </div>
+            <div class="col">
+              <img
+                src="./assets/todendorf/todendorf dusche2.jpg"
+                class="img-fluid w-100 thumbnail-img"
+                data-bs-target="#hausGalerie"
+                data-bs-slide-to="4"
+                alt="Vorschau 5"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- RECHTE SPALTE: Ausstattung & Buchung -->
+        <div class="col-lg-5">
+          <div class="card p-4 shadow-sm bg-light h-100 border-0">
+            <h3 class="fw-bold mb-3 text-primary">Ausstattung & Details</h3>
+
+            <!-- Optimierte Ausstattungsliste mit festen Icon-Boxen -->
+            <ul class="list-unstyled mb-4 fs-5 pricing-list">
+              <li class="d-flex align-items-start mb-3">
+                <div
+                  class="bg-warning-subtle text-warning rounded-circle d-flex align-items-center justify-content-center me-3 flex-shrink-0"
+                  style="width: 35px; height: 35px"
+                >
+                  <i class="bi bi-moon-stars-fill fs-5"></i>
+                </div>
+                <div>
+                  <strong>Reine Einzelbetten</strong>
+                  <span class="d-block text-muted fs-6"
+                    >Maximale Privatsphäre, keine Doppelbetten.</span
+                  >
+                </div>
+              </li>
+
+              <li class="d-flex align-items-start mb-3">
+                <div
+                  class="bg-warning-subtle text-warning rounded-circle d-flex align-items-center justify-content-center me-3 flex-shrink-0"
+                  style="width: 35px; height: 35px"
+                >
+                  <i class="bi bi-wifi fs-4"></i>
+                </div>
+                <div>
+                  <strong>Schnelles WLAN</strong>
+                  <span class="d-block text-muted fs-6"
+                    >Kostenloses Highspeed-Internet im gesamten Haus.</span
+                  >
+                </div>
+              </li>
+
+              <li class="d-flex align-items-start mb-3">
+                <div
+                  class="bg-warning-subtle text-warning rounded-circle d-flex align-items-center justify-content-center me-3 flex-shrink-0"
+                  style="width: 35px; height: 35px"
+                >
+                  <i class="bi bi-egg-fried fs-5"></i>
+                </div>
+                <div>
+                  <strong>Vollküche</strong>
+                  <span class="d-block text-muted fs-6"
+                    >Mit Herd, Ofen, Mikrowelle, Kaffeemaschine &
+                    Geschirr.</span
+                  >
+                </div>
+              </li>
+
+              <li class="d-flex align-items-start mb-3">
+                <div
+                  class="bg-warning-subtle text-warning rounded-circle d-flex align-items-center justify-content-center me-3 flex-shrink-0"
+                  style="width: 35px; height: 35px"
+                >
+                  <i class="bi bi-pci-card fs-5"></i>
+                </div>
+                <div>
+                  <strong>Waschmaschine & Trockner</strong>
+                  <span class="d-block text-muted fs-6"
+                    >Kostenfreie Nutzung für saubere Arbeitskleidung.</span
+                  >
+                </div>
+              </li>
+
+              <li class="d-flex align-items-start mb-3">
+                <div
+                  class="bg-warning-subtle text-warning rounded-circle d-flex align-items-center justify-content-center me-3 flex-shrink-0"
+                  style="width: 35px; height: 35px"
+                >
+                  <i class="bi bi-truck fs-5"></i>
+                </div>
+                <div>
+                  <strong>Großer Parkplatz</strong>
+                  <span class="d-block text-muted fs-6"
+                    >Direkt am Haus, ideal auch für Sprinter und Lkw.</span
+                  >
+                </div>
+              </li>
+
+              <li class="d-flex align-items-start mb-3">
+                <div
+                  class="bg-warning-subtle text-warning rounded-circle d-flex align-items-center justify-content-center me-3 flex-shrink-0"
+                  style="width: 35px; height: 35px"
+                >
+                  <i class="bi bi-check-lg fs-4"></i>
+                </div>
+                <div>
+                  <strong>Inklusive Nebenkosten</strong>
+                  <span class="d-block text-muted fs-6"
+                    >Bettwäsche, Endreinigung und Energie sind im Preis
+                    enthalten.</span
+                  >
+                </div>
+              </li>
+            </ul>
+
+            <hr />
+
+            <!-- Preisbox -->
+            <div class="my-3">
+              <span class="text-muted d-block"
+                >Preise in dieser Unterkunft:</span
+              >
+              <span class="h2 fw-bold text-warning">Ab 25,- €</span>
+              <span class="text-muted">/ Nacht & Person</span>
+              <small class="d-block text-muted mt-1"
+                >*Preise variieren je nach Belegung und Aufenthaltsdauer.</small
+              >
+            </div>
+
+            <!-- Direkt-Aktionen -->
+            <div class="d-grid gap-2 mt-4">
+              <a href="tel:+49123456789" class="btn btn-warning btn-lg fw-bold">
+                <i class="bi bi-telephone-fill me-2"></i> Jetzt anrufen
+              </a>
+              <a
+                href="https://wa.me."
+                class="btn btn-success btn-lg fw-bold"
+                target="_blank"
+              >
+                <i class="bi bi-whatsapp me-2"></i> Per WhatsApp anfragen
+              </a>
+              <a href="index.html#kontakt" class="btn btn-outline-dark">
+                Zum Kontaktformular
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+      <div class="container">
+        <p class="mb-0">
+          &copy; 2026 Bettenvermietung-Stormarn. Alle Rechte vorbehalten.
+        </p>
+      </div>
+    </footer>
+
+    <!-- 4. LOKALES Bootstrap 5 JS Bundle -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+    <!-- Script um die Thumbnails aktiv zu schalten wenn geslidet wird -->
+    !-- Skript für die Vorschaubilder-Logik -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const carouselEl = document.getElementById("hausGalerie");
+        const thumbnails = document.querySelectorAll(".thumbnail-img");
+
+        if (carouselEl) {
+          // Event-Listener: Wartet darauf, dass der Slider das Bild wechselt
+          carouselEl.addEventListener("slide.bs.carousel", (event) => {
+            // Entfernt den aktiven Rahmen von allen Vorschaubildern
+            thumbnails.forEach((thumb) => thumb.classList.remove("active"));
+
+            // Setzt den aktiven Rahmen auf das neu gewählte Bild
+            if (thumbnails[event.to]) {
+              thumbnails[event.to].classList.add("active");
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
