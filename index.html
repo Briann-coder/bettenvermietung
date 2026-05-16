@@ -9,7 +9,7 @@
     <link href="css/main.css" rel="stylesheet" />
 
     <!-- 2. Bootstrap Icons (Damit WLAN-, Lkw- und Haus-Symbole laden) -->
-    <!--<link href="https://jsdelivr.net" rel="stylesheet"> -->
+    
 
     <!-- 3. Optionale manuelle CSS-Ergänzungen -->
     <link rel="stylesheet" href="css/_custom.css" />
@@ -222,12 +222,16 @@
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-secondary text-white text-center py-3">
-      <div class="container">
-        <small>&copy; 2026 Bettenvermietung-Stormarn. Alle Rechte vorbehalten. | <a href="#" class="text-white-50">Impressum</a> | <a href="#" class="text-white-50">Datenschutz</a></small>
-      </div>
-    </footer>
+    <!-- Footer für alle Seiten -->
+<footer class="bg-dark text-white text-center py-4 mt-auto">
+  <div class="container">
+    <p class="mb-1">&copy; 2026 Bettenvermietung-Stormarn. Alle Rechte vorbehalten.</p>
+    <div class="small">
+      <a href="./impressum.html" class="text-warning text-decoration-none me-3">Impressum</a>
+      <a href="./datenschutz.html" class="text-warning text-decoration-none">Datenschutz</a>
+    </div>
+  </div>
+</footer>
 
     <!-- 4. LOKALES Bootstrap 5 JS Bundle (Zwingend am Ende vor dem Body-Ende) -->
     <script src="js/bootstrap.bundle.min.js"></script>
